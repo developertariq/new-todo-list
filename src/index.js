@@ -57,7 +57,7 @@ selectTask.addEventListener('click', (e) => {
   }
 });
 
-for (let i = 0; i < descLabel.length; i += 1) {
+for (let i = 0; i < taskDescripton.length; i += 1) {
   taskDescripton[i].onclick = function () {
     const label = document.querySelector('.task-color-pink');
     const trashCan = document.querySelector('.fa-trash-can');
@@ -132,7 +132,8 @@ for (let i = 0; i < check.length; i += 1) {
     const span = document.querySelector('.task-color-pink');
     if (trashCan !== null) {
       trashCan.classList.add('fas', 'fa-ellipsis-vertical');
-      trashCan.classList.remove('far', 'fa-trash-alt');    }
+      trashCan.classList.remove('far', 'fa-trash-alt');
+    }
 
     if (span !== null) {
       span.classList.remove('task-color-pink');
