@@ -36,10 +36,7 @@
     "stylelint-scss": "^3.21.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
-  },
-  "dependencies": {
-    "gh-pages": "^4.0.0",
-    "todo-list": "^0.0.3"
+    "webpack-dev-server": "^4.11.1",
+    "webpack-lighthouse-plugin": "^1.0.9"
   }
 }
