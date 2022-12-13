@@ -1,0 +1,31 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "extends": ["airbnb-base", "eslint:recommended"],
+  "rules": {
+    "func-names": ["error", "never"],
+    "no-unused-vars": ["error", { "vars": "local", "args": "none", "ignoreRestSiblings": true, "varsIgnorePattern": "[iI]gnored" }],
+    "no-shadow": "off",
+    "no-param-reassign": "off",
+    "eol-last": "off",
+    "import/extensions": [ 1, {
+      "js": "always", "json": "always"
+    }],
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "devDependencies": true
+      }]
+  },
+  "ignorePatterns": [
+    "dist/",
+    "build/"
+  ]
+}
