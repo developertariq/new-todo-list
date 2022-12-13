@@ -1,6 +1,7 @@
 /* eslint no-unused-vars: "error" */
 /* eslint no-unsafe-optional-chaining: ["error", { "disallowArithmeticOperators": false }] */
 
+import _ from 'lodash';
 import './style.css';
 import {
   addNewTask, deleteTask, editTask, displayTaskList, completeTask,
