@@ -8,7 +8,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   performance: {
-      hints: false,
+      hints: true,
       maxAssetSize: 500000,
     },
   stats: {
