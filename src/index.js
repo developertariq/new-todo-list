@@ -6,7 +6,7 @@ import {
   addNewTask, deleteTask, editTask, displayTaskList, completeTask,
 } from './todolist.js';
 import mainList from './loadlist.js';
-// import '@fortawesome/fontawesome-free/js/all.js';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 let newDescription = '';
 

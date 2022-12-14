@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/developertariq/new-todo-list/issues"
   },
-  "homepage": "https://developertariq.github.io/new-todo-list/readme",
+  "homepage": "https://developertariq.github.io/new-todo-list#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.2",
@@ -40,7 +40,6 @@
     "webpack-lighthouse-plugin": "^1.0.9"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0",
-    "loadash": "^1.0.0"
+    "@fortawesome/fontawesome-svg-core": "^6.2.1"
   }
 }
