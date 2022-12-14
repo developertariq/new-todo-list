@@ -3,53 +3,24 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: {
-    index: './src/index.js',
-  },
-  devtool: 'inline-source-map',
-  stats: {
-    warnings: false,
-  },
+  entry: './src/index.js',
   devServer: {
     static: './dist',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'To Do list: list structure',
+      template: './src/index.html',
     }),
   ],
   output: {
-    filename: '[name].bundle.js',
+    filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
   },
-  cache: true,
   module: {
     rules: [
       {
         test: /\.css$/i,
-        include: path.resolve(__dirname, 'src'),
         use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        include: path.resolve(__dirname, 'src'),
-        type: 'asset/resource',
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        include: path.resolve(__dirname, 'src'),
-        type: 'asset/resource',
-      },
-      {
-        test: /\.(csv|tsv)$/i,
-        include: path.resolve(__dirname, 'src'),
-        use: ['csv-loader'],
-      },
-      {
-        test: /\.xml$/i,
-        include: path.resolve(__dirname, 'src'),
-        use: ['xml-loader'],
       },
     ],
   },

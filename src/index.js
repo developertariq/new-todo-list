@@ -1,12 +1,11 @@
-/* eslint no-unused-vars: "error" */
 /* eslint no-unsafe-optional-chaining: ["error", { "disallowArithmeticOperators": false }] */
 
+import _ from 'lodash';
 import './style.css';
 import {
   addNewTask, deleteTask, editTask, displayTaskList, completeTask,
 } from './todolist.js';
 import mainList from './loadlist.js';
-import '@fortawesome/fontawesome-free/js/all.js';
 
 let newDescription = '';
 
@@ -18,15 +17,15 @@ function getNewTaskDescription() {
   return newDescription;
 }
 
-function listContainer() {
-  const listContainer = document.createElement('div');
-  listContainer.id = 'list-container';
-  listContainer.classList.add('active', 'complete');
-  listContainer.appendChild(mainList());
-  return listContainer;
+function component() {
+  const element = document.createElement('div');
+  element.id = 'list-container';
+  element.classList.add('active', 'complete');
+  element.appendChild(mainList());
+  return element;
 }
 
-document.body.appendChild(listContainer());
+document.body.appendChild(component());
 
 const form = document.getElementById('new-task-form');
 const addNewButton = document.querySelector('#submit-new-task');
@@ -41,12 +40,12 @@ form.addEventListener('submit', () => {
   displayTaskList();
 });
 
-addNewButton.addEventListener('click', () => {
-  if (document.getElementById('newtask').value !== '') {
-    addNewTask(document.getElementById('newtask').value);
-  }
-  displayTaskList();
-});
+// addNewButton.addEventListener('click', () => {
+//   if (document.getElementById('newtask').value !== '') {
+//     addNewTask(document.getElementById('newtask').value);
+//   }
+//   displayTaskList();
+// });
 
 selectTask.addEventListener('click', (e) => {
   if (e.target.classList.contains('fa-trash-can')) {
