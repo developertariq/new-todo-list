@@ -10,6 +10,9 @@ module.exports = {
   stats: {
     warnings: false,
   },
+  optimization: {
+    chunkIds: false,
+  },
   devServer: {
     static: './dist',
   },
