@@ -21,7 +21,6 @@
   },
   "homepage": "https://developertariq.github.io/new-todo-list",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.1",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.2",
     "eslint": "^7.32.0",
@@ -41,6 +40,7 @@
     "webpack-lighthouse-plugin": "^1.0.9"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "loadash": "^1.0.0"
   }
 }
