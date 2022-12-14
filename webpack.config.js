@@ -7,10 +7,6 @@ module.exports = {
     index: './src/index.js',
   },
   devtool: 'inline-source-map',
-  performance: {
-      hints: true,
-      maxAssetSize: 500000,
-    },
   stats: {
     warnings: false,
   },
