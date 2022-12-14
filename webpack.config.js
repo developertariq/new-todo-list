@@ -7,6 +7,9 @@ module.exports = {
     index: './src/index.js',
   },
   devtool: 'inline-source-map',
+  performance: {
+      hints: false,
+    },
   stats: {
     warnings: false,
   },
