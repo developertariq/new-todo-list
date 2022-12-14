@@ -23,14 +23,19 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
+  cache: true,
   optimization: {
-    moduleIds: 'hashed',
-    runtimeChunk: {
-      name: 'manifest',
-    },
-    splitChunks: {
-      chunks: 'all',
-    },
+      runtimeChunk: 'single',
+      moduleIds: 'deterministic',
+      splitChunks: {
+          cacheGroups: {
+              vendor: {
+                  test: /[\\/]node_modules[\\/]/,
+                  name: 'vendors',
+                  chunks: 'all',
+              },
+          },
+      },
   },
   module: {
     rules: [
