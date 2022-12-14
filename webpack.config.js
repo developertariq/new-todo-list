@@ -10,9 +10,6 @@ module.exports = {
   stats: {
     warnings: false,
   },
-  optimization: {
-    chunkIds: false,
-  },
   devServer: {
     static: './dist',
   },
@@ -27,7 +24,13 @@ module.exports = {
     clean: true,
   },
   optimization: {
-    runtimeChunk: 'single',
+    moduleIds: 'hashed',
+    runtimeChunk: {
+      name: 'manifest',
+    },
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   module: {
     rules: [
